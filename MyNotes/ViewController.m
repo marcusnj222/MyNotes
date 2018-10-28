@@ -29,6 +29,7 @@
     [self setNeedToFetchNotes:YES];
 }
 
+// This function is an IBAction which will be called when we segue back to this view controller. It is set up with the Exit action on a storyboard.
 - (IBAction)unwind:(UIStoryboardSegue*)unwindSegue
 {
     [[self noteCollectionView] reloadData];
@@ -62,6 +63,7 @@
         return [self cachedNotes];
     } else
     {
+        // To access data from a managed object context, you need to execute a fetch request
         NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"Note"];
         
         NSArray* notes = [[self.notesManagedObjectContext executeFetchRequest:request error:NULL] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2)

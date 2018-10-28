@@ -38,7 +38,11 @@
 {
     return @"Note";
 }
-
+/*
+ 
+ The following is an alternative way to save the color. Instead of save three floats (R,G,B), save a key
+ which is used to look up the R, G, B values in a dictionary.
+ 
 + (NSDictionary*)colorDictionary
 {
     return [NSDictionary dictionaryWithObjects:@[@[@(0.5),@(0.5),@(0.5)],
@@ -52,6 +56,6 @@
                                        forKeys:@[@"LightBlue", @"Yellow", @"Red", @"Green",
                                                  @"Blue", @"Orange", @"Purple", @"Pink", @"Gray"]];
 }
-
+*/
 
 @end
