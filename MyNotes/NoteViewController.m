@@ -22,6 +22,8 @@
     //Always call super before anything else
     [super viewDidLoad];
 
+    self.textView.layer.cornerRadius = 10;
+    
     // Initialize properties of the fields. We need to set the attributes of the view
     // based on the attributes of the Notes model object passed in.
     [[self titleField] setText:[[self note] title]];

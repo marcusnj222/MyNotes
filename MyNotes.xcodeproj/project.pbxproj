@@ -22,6 +22,8 @@
 		2CCA79D12175761B0038486B /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCA79D02175761B0038486B /* Note.m */; };
 		2CCA79D421757F4F0038486B /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCA79D321757F4F0038486B /* NoteViewController.m */; };
 		2CD559F121863E460075A7D1 /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD559F021863E460075A7D1 /* ColorViewController.m */; };
+		2CD991A42187E0BA00DECE55 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD991A32187E0BA00DECE55 /* Settings.m */; };
+		2CD991A62187E4D500DECE55 /* menuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CD991A52187E4D500DECE55 /* menuIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,9 @@
 		2CCA79D321757F4F0038486B /* NoteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
 		2CD559EF21863E460075A7D1 /* ColorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
 		2CD559F021863E460075A7D1 /* ColorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
+		2CD991A22187E0BA00DECE55 /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		2CD991A32187E0BA00DECE55 /* Settings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		2CD991A52187E4D500DECE55 /* menuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuIcon.png; path = Assets.xcassets/menuIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,10 +131,13 @@
 				2C79ACA62178D1D9005EABE6 /* colorButton.png */,
 				2CCA799A217574D00038486B /* Main.storyboard */,
 				2CCA79A2217574D00038486B /* LaunchScreen.storyboard */,
+				2CD991A52187E4D500DECE55 /* menuIcon.png */,
 				2CCA7994217574CF0038486B /* AppDelegate.h */,
 				2CCA7995217574CF0038486B /* AppDelegate.m */,
 				2CCA7997217574D00038486B /* ViewController.h */,
 				2CCA7998217574D00038486B /* ViewController.m */,
+				2CD991A22187E0BA00DECE55 /* Settings.h */,
+				2CD991A32187E0BA00DECE55 /* Settings.m */,
 				2CCA79D221757F4F0038486B /* NoteViewController.h */,
 				2CCA79D321757F4F0038486B /* NoteViewController.m */,
 				2CD559EF21863E460075A7D1 /* ColorViewController.h */,
@@ -266,6 +274,7 @@
 				2CCA79A4217574D00038486B /* LaunchScreen.storyboard in Resources */,
 				2C79ACAA2178D1D9005EABE6 /* add_icon.png in Resources */,
 				2CCA79A1217574D00038486B /* Assets.xcassets in Resources */,
+				2CD991A62187E4D500DECE55 /* menuIcon.png in Resources */,
 				2C79ACA92178D1D9005EABE6 /* colorButton.png in Resources */,
 				2CCA799C217574D00038486B /* Main.storyboard in Resources */,
 			);
@@ -298,6 +307,7 @@
 				2CCA79A7217574D00038486B /* main.m in Sources */,
 				2CCA79D421757F4F0038486B /* NoteViewController.m in Sources */,
 				2CCA799F217574D00038486B /* MyNotes.xcdatamodeld in Sources */,
+				2CD991A42187E0BA00DECE55 /* Settings.m in Sources */,
 				2CD559F121863E460075A7D1 /* ColorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

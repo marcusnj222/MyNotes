@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Note.h"
 #import "NoteViewController.h"
+#import "Settings.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *noteCollectionView;
@@ -32,6 +33,12 @@
 // This function is an IBAction which will be called when we segue back to this view controller. It is set up with the Exit action on a storyboard.
 - (IBAction)unwind:(UIStoryboardSegue*)unwindSegue
 {
+    if (([[unwindSegue identifier] isEqualToString:@"revisedDate"]) ||
+        ([[unwindSegue identifier] isEqualToString:@"createdDate"]) ||
+        ([[unwindSegue identifier] isEqualToString:@"title"]))
+    {
+        [Settings setNoteSortDescriptorWithKey:[unwindSegue identifier]];
+    }
     [[self noteCollectionView] reloadData];
 }
 
@@ -66,12 +73,10 @@
         // To access data from a managed object context, you need to execute a fetch request
         NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"Note"];
         
-        NSArray* notes = [[self.notesManagedObjectContext executeFetchRequest:request error:NULL] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2)
-                          {
-                              Note *note1 = obj1;
-                              Note *note2 = obj2;
-                              return [note2.revisedDate compare:note1.revisedDate];
-                          }];
+        NSSortDescriptor *noteSortDescriptor = [Settings noteSortDescriptor];
+        
+        NSArray* notes = [[self.notesManagedObjectContext executeFetchRequest:request error:NULL] sortedArrayUsingDescriptors:@[noteSortDescriptor]];
+
         
         [self setCachedNotes:notes];
         [self setNeedToFetchNotes:NO];
@@ -101,6 +106,7 @@
     
     [cellLabel setText:[noteForCell title]];
     
+    cell.layer.cornerRadius = 5;
     
     return cell;
 }

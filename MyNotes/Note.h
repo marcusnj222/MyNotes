@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString* title;
 @property (strong, nonatomic) NSString* text;
 @property (strong, nonatomic) NSDate* revisedDate;
+@property (strong, nonatomic) NSDate* createdDate;
 
 + (instancetype)insertNoteWithTitle:(NSString*)title
                                text:(NSString*)text

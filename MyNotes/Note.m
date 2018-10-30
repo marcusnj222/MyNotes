@@ -16,6 +16,7 @@
 @dynamic title;
 @dynamic text;
 @dynamic revisedDate;
+@dynamic createdDate;
 
 + (Note*)insertNoteWithTitle:(NSString*)title
                         text:(NSString*)text
@@ -30,7 +31,8 @@
     note.green = [rgb objectAtIndex:1];
     note.blue = [rgb objectAtIndex:2];
     note.revisedDate = [NSDate date];
-    
+    note.createdDate = [NSDate date];
+
     return note;
 }
 
